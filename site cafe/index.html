@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Grão Dourado · Cafés especiais, torra fresca e entrega rápida</title>
+  <meta name="description" content="Cafeteria Grão Dourado: espresso, cappuccino, cold brew, pão de queijo, doces e grãos de torra fresca. Peça pelo site com Pix e receba em casa.">
+  <meta name="theme-color" content="#15100c">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="./">
+  <!-- Compartilhamento (WhatsApp, Instagram, Facebook). Depois de publicar, troque "assets/og.jpg" pelo endereço completo, ex.: https://seusite.com.br/assets/og.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Grão Dourado">
+  <meta property="og:title" content="Grão Dourado · Cafés especiais">
+  <meta property="og:description" content="Espresso, cold brew, pão de queijo e grãos de torra fresca. Peça pelo site e receba em casa.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preload" as="image" href="assets/video/c1.jpg">
+  <link rel="stylesheet" href="fonts.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="magia.css">
+</head>
+<body>
+  <a class="skip" href="#produtos">Pular para o cardápio</a>
+
+  <!-- Ilustrações reutilizáveis -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="cup" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="176" rx="78" ry="12" fill="#00000030"/>
+      <ellipse cx="100" cy="162" rx="72" ry="14" fill="#f4e6d3"/>
+      <path d="M40 70h110v50a55 55 0 0 1-55 55 55 55 0 0 1-55-55z" fill="#fff8ee"/>
+      <path d="M150 88h14a20 20 0 0 1 0 40h-18" fill="none" stroke="#fff8ee" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="95" cy="70" rx="55" ry="12" style="fill:var(--c,#6f4e37)"/>
+      <ellipse cx="95" cy="70" rx="40" ry="7" fill="#ffffff33"/>
+    </symbol>
+    <symbol id="bean" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="30" rx="18" ry="26" fill="currentColor" transform="rotate(35 30 30)"/>
+      <path d="M20 12c12 10 8 26 20 36" fill="none" stroke="#00000055" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="bag" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="182" rx="66" ry="9" fill="#00000030"/>
+      <path d="M50 40h100l12 136H38z" style="fill:var(--c,#3b2a20)"/>
+      <path d="M50 40h100l3 24H47z" fill="#00000030"/>
+      <circle cx="100" cy="112" r="30" fill="#f4e6d3"/>
+      <use href="#bean" x="82" y="90" width="36" height="44" style="color:var(--c,#3b2a20)"/>
+    </symbol>
+    <symbol id="latte" viewBox="0 0 200 200">
+      <circle cx="100" cy="108" r="90" fill="#00000030"/>
+      <circle cx="100" cy="100" r="90" fill="#f4e6d3"/>
+      <rect x="150" y="90" width="44" height="20" rx="10" fill="#fff8ee"/>
+      <circle cx="100" cy="100" r="66" fill="#fff8ee"/>
+      <circle cx="100" cy="100" r="56" style="fill:var(--c,#8a5a3b)"/>
+      <path d="M100 138c-30-22-38-38-38-50a20 20 0 0 1 38-8 20 20 0 0 1 38 8c0 12-8 28-38 50z" fill="#fff2dd"/>
+    </symbol>
+    <symbol id="ice" viewBox="0 0 100 100">
+      <rect x="8" y="8" width="84" height="84" rx="16" fill="#bfe6ff" fill-opacity=".5" stroke="#ffffffaa" stroke-width="3"/>
+      <path d="M22 30l22-8" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="glass" viewBox="0 0 120 200">
+      <path d="M14 10h92l-10 176a12 12 0 0 1-12 10H36a12 12 0 0 1-12-10z" fill="#ffffff22" stroke="#ffffff77" stroke-width="3"/>
+      <path d="M20 60h80l-7 126a8 8 0 0 1-8 7H35a8 8 0 0 1-8-7z" fill="#2a1408"/>
+      <path d="M20 60h80" stroke="#c98b4f" stroke-width="4"/>
+      <rect x="34" y="70" width="28" height="28" rx="6" fill="#bfe6ff" fill-opacity=".45" transform="rotate(-10 48 84)"/>
+      <rect x="62" y="104" width="26" height="26" rx="6" fill="#bfe6ff" fill-opacity=".4" transform="rotate(12 75 117)"/>
+      <path d="M84 0L66 130" stroke="#ff6b6b" stroke-width="7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="spark" viewBox="0 0 100 100">
+      <path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0z" fill="currentColor"/>
+    </symbol>
+    <symbol id="bubble" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="currentColor" fill-opacity=".55"/>
+      <circle cx="34" cy="34" r="10" fill="#fff" fill-opacity=".7"/>
+    </symbol>
+  </svg>
+
+  <header class="nav" id="nav">
+    <a href="#inicio" class="logo" aria-label="Grão Dourado, voltar ao início"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="7" ry="10" transform="rotate(32 12 12)" fill="currentColor"/><path d="M15.95 4.4c-2.37 2.37-.53 5-2.63 7.37s-3.95 3.42-4.73 6.84" fill="none" stroke="var(--mark-cut)" stroke-width="1.6" stroke-linecap="round"/></svg>Grão Dourado</a>
+    <div class="open-badge" data-open><i></i><span>…</span></div>
+    <nav aria-label="Principal">
+      <a href="#produtos">Cardápio</a>
+      <a href="#lab">Laboratório</a>
+      <a href="#clube">Clube</a>
+      <a href="#contato">Contato</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Alternar tema claro/escuro"><span data-theme-ico>☾</span></button>
+      <button class="jazz" id="jazzBtn" type="button" aria-pressed="false" title="Tocar a trilha de jazz da casa"><span class="vinyl" aria-hidden="true"><i></i></span><span class="jz-txt">Jazz</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1.1 11.2a1 1 0 0 1-1 .8H7.6a1 1 0 0 1-1-.8L5.5 8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 10V6.8a3 3 0 0 1 6 0V10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i><i></i></button>
+    </nav>
+  </header>
+
+  <!-- Menu do celular -->
+  <div class="mmenu" id="mmenu" aria-label="Menu">
+    <div class="mmenu-in">
+      <div class="open-badge big" data-open><i></i><span>…</span></div>
+      <a href="#inicio"><small>01</small>Início</a>
+      <a href="#produtos"><small>02</small>Cardápio</a>
+      <a href="#lab"><small>03</small>Laboratório de sabor</a>
+      <a href="#clube"><small>04</small>Clube &amp; presentes</a>
+      <a href="#ajuda"><small>05</small>Dúvidas</a>
+      <a href="#contato"><small>06</small>Contato</a>
+      <div class="mmenu-tools">
+        <button type="button" class="tool" data-theme-toggle><span data-theme-ico>☾</span> Tema</button>
+        <button type="button" class="tool" data-calm-toggle><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-calm-label>Efeitos completos</span></button>
+        <button type="button" class="tool" data-lite-toggle><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h12v11h-12zM15.5 10.5l5-3v9l-5-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-lite-label>Vídeos ligados</span></button>
+      </div>
+      <p class="mmenu-foot"><span data-cfg="endereco"></span><br><a data-cfg-href="tel" data-cfg="telefone"></a></p>
+    </div>
+  </div>
+
+  <!-- Bolinhas de navegação das cenas (criadas pelo JS) -->
+  <nav class="dots" id="dots" aria-label="Cenas"></nav>
+
+  <!-- =====================================================
+       HISTÓRIA EM CENAS (a rolagem controla tudo)
+       Para usar fotos de verdade: veja os comentários no style.css
+       ===================================================== -->
+  <main id="conteudo">
+  <section class="story" id="inicio" style="--n:5" aria-label="Jornada em vídeo pela cafeteria">
+    <div class="pin">
+
+      <!-- Botão de som ambiente e linha do tempo -->
+      <div class="hud">
+        <button class="snd" id="snd" type="button" aria-pressed="false" title="Ligar o som ambiente"><span id="sndIco">🔇</span> <span id="sndTxt">Som desligado</span></button>
+      </div>
+      <div class="timeline" id="timeline" aria-label="Linha do tempo"><div class="tl-track"><i id="tlFill"></i></div><ul id="tlLabels"></ul></div>
+
+      <!-- CENA 1 · CAFÉ -->
+      <article class="scene s0" data-ink="#fff3e0">
+        <div class="bg vbg"><video class="vid" data-vid data-n="1" muted playsinline preload="none" disablepictureinpicture poster="assets/video/c1.jpg" aria-hidden="true"></video></div><div class="shade"></div>
+        <div class="title" data-text="Café" style="--fs:27vw"></div>
+        <div class="copy">
+          <span class="tag">Torrado com carinho</span>
+          <p>Grãos selecionados, torra fresca e entrega rápida. Do cafezinho da manhã ao espresso da tarde.</p>
+          <a href="#produtos" class="btn">Ver cardápio e pedir</a>
+        </div>
+        <div class="hint">Role. O café esfria, o site não<i></i></div>
+      </article>
+
+      <!-- CENA 2 · ESPRESSO -->
+      <article class="scene s1" data-ink="#ffe9d2">
+        <div class="bg vbg"><video class="vid" data-vid data-n="2" muted playsinline preload="none" disablepictureinpicture data-poster="assets/video/c2.jpg" aria-hidden="true"></video></div>
+        <div class="shade"></div>
+        <div class="title" data-text="Espresso" style="--fs:17vw"></div>
+        <div class="copy">
+          <span class="num">01 / 04</span>
+          <p>Encorpado e intenso, com notas de chocolate amargo.</p>
+          <strong class="price">R$ 8,00</strong> <button type="button" class="mini-add" data-sku="espresso-intenso">Adicionar<span class="disc" aria-hidden="true"></span></button>
+        </div>
+      </article>
+
+      <!-- CENA 3 · CAPPUCCINO -->
+      <article class="scene s2" data-ink="#fff3e0">
+        <div class="bg vbg"><video class="vid" data-vid data-n="3" muted playsinline preload="none" disablepictureinpicture data-poster="assets/video/c3.jpg" aria-hidden="true"></video></div><div class="shade"></div>
+        <div class="title" data-text="Cappuccino" style="--fs:14vw"></div>
+        <div class="copy">
+          <span class="num">02 / 04</span>
+          <p>Espuma de leite aveludada, um toque de canela e um coração no meio.</p>
+          <strong class="price">R$ 12,00</strong> <button type="button" class="mini-add" data-sku="cappuccino-cremoso">Adicionar<span class="disc" aria-hidden="true"></span></button>
+        </div>
+      </article>
+
+      <!-- CENA 4 · COLD BREW -->
+      <article class="scene s3" data-ink="#e8f7ff">
+        <div class="bg vbg"><video class="vid" data-vid data-n="4" muted playsinline preload="none" disablepictureinpicture data-poster="assets/video/c4.jpg" aria-hidden="true"></video></div><div class="shade"></div>
+        <div class="title" data-text="Cold Brew" style="--fs:15vw"></div>
+        <div class="copy">
+          <span class="num">03 / 04</span>
+          <p>Extraído a frio por 18 horas. Suave, gelado e sem amargor.</p>
+          <strong class="price">R$ 13,00</strong> <button type="button" class="mini-add" data-sku="cold-brew">Adicionar<span class="disc" aria-hidden="true"></span></button>
+        </div>
+      </article>
+
+      <!-- CENA 5 · GRÃOS -->
+      <article class="scene s4" data-ink="#fff6d8">
+        <div class="bg vbg"><video class="vid" data-vid data-n="5" muted playsinline preload="none" disablepictureinpicture data-poster="assets/video/c5.jpg" aria-hidden="true"></video></div><div class="shade"></div>
+        <div class="title" data-text="Grãos" style="--fs:26vw"></div>
+        <div class="copy">
+          <span class="num">04 / 04</span>
+          <p>Leve o cheirinho de café fresco para casa. Torra média ou escura, em pacotes de 250g e 500g.</p>
+          <a href="#produtos" class="btn">Ver cardápio</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       VITRINE · os favoritos da casa, cada um sob a sua luz
+       Para trocar os produtos, edite a lista "vitrineData" abaixo
+       (id = o mesmo data-id do cardápio).
+       ===================================================== -->
+  <section class="vitrine" id="vitrine" data-dark aria-roledescription="carrossel" aria-label="Favoritos da casa">
+    <div class="vt-light" aria-hidden="true"></div>
+    <div class="vt-in">
+      <div class="vt-stage">
+        <div class="vt-pool" aria-hidden="true"></div>
+        <img class="vt-img" id="vtImg" src="assets/3d/cup_espresso_34.webp" alt="" width="897" height="556" decoding="async">
+        <canvas class="vt-fx" id="vtFx" aria-hidden="true"></canvas>
+      </div>
+      <div class="vt-info">
+        <p class="vt-top"><span>Favoritos da casa</span><span class="vt-count" id="vtCount">1 de 5</span></p>
+        <h2 class="vt-name" id="vtName">Espresso Intenso</h2>
+        <p class="vt-desc" id="vtDesc">Encorpado e intenso, com notas de chocolate amargo e um final longo.</p>
+        <dl class="vt-notes" id="vtNotes"></dl>
+        <div class="vt-buy">
+          <strong class="vt-price" id="vtPrice">R$ 8,00</strong>
+          <button type="button" class="btn btn-add" id="vtAdd">Adicionar<span class="disc" aria-hidden="true"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="vt-bar">
+      <button type="button" class="vt-arrow" id="vtPrev" aria-label="Favorito anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6 8.5 12l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="vt-thumbs" id="vtThumbs"></div>
+      <button type="button" class="vt-arrow" id="vtNext" aria-label="Próximo favorito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+    <script type="application/json" id="vitrineData">
+    [
+      { "id": "espresso-intenso", "img": "assets/3d/cup_espresso_34.webp", "luz": "#6e1f22", "efeito": "vapor", "origem": [0.58, 0.2],
+        "texto": "Encorpado e intenso, com notas de chocolate amargo e um final longo que fica.",
+        "notas": { "Intensidade": 5, "Doçura": 1, "Corpo": 4 } },
+      { "id": "cappuccino-cremoso", "img": "assets/3d/latte_heart.webp", "luz": "#94592c", "efeito": "vapor", "origem": [0.53, 0.2],
+        "texto": "Espuma de leite aveludada, um toque de canela e um coração desenhado na hora.",
+        "notas": { "Intensidade": 3, "Doçura": 3, "Corpo": 4 } },
+      { "id": "cold-brew", "img": "assets/3d/iced_coffee.webp", "luz": "#15506a", "efeito": "gelo", "origem": [0.5, 0.45],
+        "texto": "Extraído a frio por 18 horas. Suave, gelado e sem amargor, do primeiro ao último gole.",
+        "notas": { "Intensidade": 3, "Doçura": 2, "Corpo": 2 } },
+      { "id": "moka-italiana-dupla", "img": "assets/3d/moka.webp", "luz": "#3f5a2c", "efeito": "vapor", "origem": [0.47, 0.03],
+        "texto": "Feito na moka como nas cozinhas italianas: forte, aromático e servido para dois.",
+        "notas": { "Intensidade": 4, "Doçura": 1, "Corpo": 5 } },
+      { "id": "blend-da-casa-500g", "img": "assets/3d/coffee_bag.webp", "luz": "#5a2a4a", "efeito": "aroma", "origem": [0.5, 0.2],
+        "texto": "Nosso blend de torra média, fresco da semana. Em grãos ou moído do jeito que você prepara.",
+        "notas": { "Intensidade": 3, "Doçura": 3, "Corpo": 3 } }
+    ]
+    </script>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="section" id="produtos">
+    <h2 class="reveal">Cardápio</h2>
+    <p class="sub reveal">Trinta itens entre cafés, gelados, coisas boas para comer e grãos para levar. Os itens com "Escolher" você personaliza: tamanho, leite, açúcar, moagem.</p>
+    <div class="menu-tools reveal">
+      <div class="filters-wrap reveal"><div class="filters" id="filters" role="tablist" aria-label="Categorias do cardápio"><span class="f-ind" id="fInd"></span><button type="button" role="tab" class="chip-f on" data-f="todos">Tudo</button><button type="button" role="tab" class="chip-f" data-f="quentes">Quentes</button><button type="button" role="tab" class="chip-f" data-f="gelados">Gelados</button><button type="button" role="tab" class="chip-f" data-f="comer">Para comer</button><button type="button" role="tab" class="chip-f" data-f="levar">Grãos</button><button type="button" role="tab" class="chip-f" data-f="casa">Para casa</button></div></div>
+      <button type="button" class="ghost-btn" id="printMenu" aria-label="Baixar o cardápio em PDF"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Cardápio em PDF</button>
+    </div>
+    <div class="grid" id="grid">
+      <article class="card reveal" data-id="espresso-intenso" data-cat="quentes" data-cat-name="Cafés quentes" data-price="8.00" data-opt="espresso" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#f3d9b8"><img class="sp3d" src="assets/3d/cup_espresso_34.webp" alt="Espresso Intenso" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Espresso Intenso</h3>
+        <p>Encorpado, notas de chocolate amargo.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 8,00</strong><button class="add" type="button" aria-label="Adicionar Espresso Intenso">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="ristretto-curto" data-cat="quentes" data-cat-name="Cafés quentes" data-price="7.50" data-opt="espresso" data-allerg="" data-diet="vegano">
+        <span class="tag-sel">Forte</span>
+        <div class="card-img" style="--bg:#e8c9c0"><img class="sp3d" src="assets/3d/cup_espresso_top.webp" alt="Ristretto Curto" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Ristretto Curto</h3>
+        <p>Metade da água, o dobro da personalidade.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 7,50</strong><button class="add" type="button" aria-label="Adicionar Ristretto Curto">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="cappuccino-cremoso" data-cat="quentes" data-cat-name="Cafés quentes" data-price="12.00" data-opt="milk" data-allerg="leite" data-diet="vegano-opc">
+        <span class="tag-sel">Clássico</span>
+        <div class="card-img" style="--bg:#ecd0b0"><img class="sp3d" src="assets/3d/latte_heart.webp" alt="Cappuccino Cremoso" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Cappuccino Cremoso</h3>
+        <p>Espuma de leite aveludada e canela.</p>
+        <div class="chips"><i class="pchip ok">opção vegana</i><i class="pchip al">leite</i></div>
+        <div class="row"><strong>R$ 12,00</strong><button class="add" type="button" aria-label="Adicionar Cappuccino Cremoso">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="latte-de-baunilha" data-cat="quentes" data-cat-name="Cafés quentes" data-price="14.00" data-opt="milk" data-allerg="leite" data-diet="vegano-opc">
+        
+        <div class="card-img" style="--bg:#f6e3c8"><img class="sp3d" src="assets/3d/cappuccino_top.webp" alt="Latte de Baunilha" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Latte de Baunilha</h3>
+        <p>Suave, doce na medida certa.</p>
+        <div class="chips"><i class="pchip ok">opção vegana</i><i class="pchip al">leite</i></div>
+        <div class="row"><strong>R$ 14,00</strong><button class="add" type="button" aria-label="Adicionar Latte de Baunilha">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="flat-white" data-cat="quentes" data-cat-name="Cafés quentes" data-price="13.00" data-opt="milk" data-allerg="leite" data-diet="vegano-opc">
+        
+        <div class="card-img" style="--bg:#efe0cc"><img class="sp3d" src="assets/3d/milk_pour.webp" alt="Flat White" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Flat White</h3>
+        <p>Leite texturizado, café em primeiro plano.</p>
+        <div class="chips"><i class="pchip ok">opção vegana</i><i class="pchip al">leite</i></div>
+        <div class="row"><strong>R$ 13,00</strong><button class="add" type="button" aria-label="Adicionar Flat White">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="coado-do-dia-v60" data-cat="quentes" data-cat-name="Cafés quentes" data-price="11.00" data-opt="filter" data-allerg="" data-diet="vegano">
+        <span class="tag-sel">Do dia</span>
+        <div class="card-img" style="--bg:#e6d7c2"><img class="sp3d" src="assets/3d/pour_over.webp" alt="Coado do Dia (V60)" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Coado do Dia (V60)</h3>
+        <p>Filtrado na hora, limpo e aromático.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 11,00</strong><button class="add" type="button" aria-label="Adicionar Coado do Dia (V60)">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="cafe-na-prensa-500ml" data-cat="quentes" data-cat-name="Cafés quentes" data-price="18.00" data-opt="filter" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#cfd9d6"><img class="sp3d" src="assets/3d/french_press.webp" alt="Café na Prensa 500ml" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Café na Prensa 500ml</h3>
+        <p>Para dividir. Ou não, ninguém está julgando.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 18,00</strong><button class="add" type="button" aria-label="Adicionar Café na Prensa 500ml">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="moka-italiana-dupla" data-cat="quentes" data-cat-name="Cafés quentes" data-price="16.00" data-opt="filter" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#d9cfc6"><img class="sp3d" src="assets/3d/moka.webp" alt="Moka Italiana Dupla" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Moka Italiana Dupla</h3>
+        <p>Extração na pressão, do jeito da nonna.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 16,00</strong><button class="add" type="button" aria-label="Adicionar Moka Italiana Dupla">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="chocolate-quente-na-caneca" data-cat="quentes" data-cat-name="Cafés quentes" data-price="15.00" data-opt="milk" data-allerg="leite" data-diet="vegano-opc">
+        <span class="tag-sel">Novo</span>
+        <div class="card-img" style="--bg:#d6ddd4"><img class="sp3d" src="assets/3d/chocolate_quente.webp" alt="Chocolate Quente na Caneca" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Chocolate Quente na Caneca</h3>
+        <p>Cacau 60% e leite vaporizado. Abraço em forma de bebida.</p>
+        <div class="chips"><i class="pchip ok">opção vegana</i><i class="pchip al">leite</i></div>
+        <div class="row"><strong>R$ 15,00</strong><button class="add" type="button" aria-label="Adicionar Chocolate Quente na Caneca">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="cold-brew" data-cat="gelados" data-cat-name="Gelados" data-price="13.00" data-opt="cold" data-allerg="" data-diet="vegano">
+        <span class="tag-sel">Mais pedido</span>
+        <div class="card-img" style="--bg:#c9dde6"><img class="sp3d" src="assets/3d/iced_coffee.webp" alt="Cold Brew" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Cold Brew</h3>
+        <p>Extraído a frio por 18 horas.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 13,00</strong><button class="add" type="button" aria-label="Adicionar Cold Brew">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="shakerato-gelado" data-cat="gelados" data-cat-name="Gelados" data-price="16.00" data-opt="cold" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#bcd3dc"><img class="sp3d" src="assets/3d/coffee_splash.webp" alt="Shakerato Gelado" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Shakerato Gelado</h3>
+        <p>Batido com gelo até formar espuma.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 16,00</strong><button class="add" type="button" aria-label="Adicionar Shakerato Gelado">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="croissant-na-manteiga" data-cat="comer" data-cat-name="Para comer" data-price="9.50" data-opt="food-warm" data-allerg="gluten,leite,ovos" data-diet="">
+        
+        <div class="card-img" style="--bg:#f2dcc0"><img class="sp3d" src="assets/3d/croissant.webp" alt="Croissant na Manteiga" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Croissant na Manteiga</h3>
+        <p>Folhado, quente, farelo por todo lado.</p>
+        <div class="chips"><i class="pchip al">glúten</i><i class="pchip al">leite</i><i class="pchip al">ovos</i></div>
+        <div class="row"><strong>R$ 9,50</strong><button class="add" type="button" aria-label="Adicionar Croissant na Manteiga">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="pao-de-queijo-3un" data-cat="comer" data-cat-name="Para comer" data-price="14.00" data-opt="food-warm" data-allerg="leite,ovos" data-diet="sem-gluten">
+        <span class="tag-sel">Novo</span>
+        <div class="card-img" style="--bg:#f0dcb6"><img class="sp3d" src="assets/3d/pao_de_queijo.webp" alt="Pão de Queijo (3un)" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Pão de Queijo (3un)</h3>
+        <p>Sai do forno de hora em hora. Confie no cheiro.</p>
+        <div class="chips"><i class="pchip ok">sem glúten</i><i class="pchip al">leite</i><i class="pchip al">ovos</i></div>
+        <div class="row"><strong>R$ 14,00</strong><button class="add" type="button" aria-label="Adicionar Pão de Queijo (3un)">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="cookies-com-gotas-3un" data-cat="comer" data-cat-name="Para comer" data-price="12.00" data-opt="food" data-allerg="gluten,leite,ovos,soja" data-diet="">
+        <span class="tag-sel">Favorito</span>
+        <div class="card-img" style="--bg:#f0d9bd"><img class="sp3d" src="assets/3d/cookies.webp" alt="Cookies com Gotas (3un)" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Cookies com Gotas (3un)</h3>
+        <p>Macios no meio, crocantes na borda.</p>
+        <div class="chips"><i class="pchip al">glúten</i><i class="pchip al">leite</i><i class="pchip al">ovos</i><i class="pchip al">soja</i></div>
+        <div class="row"><strong>R$ 12,00</strong><button class="add" type="button" aria-label="Adicionar Cookies com Gotas (3un)">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="brownie-belga" data-cat="comer" data-cat-name="Para comer" data-price="13.50" data-opt="food-warm" data-allerg="gluten,leite,ovos" data-diet="">
+        <span class="tag-sel">Novo</span>
+        <div class="card-img" style="--bg:#e0c9b4"><img class="sp3d" src="assets/3d/brownie.webp" alt="Brownie Belga" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Brownie Belga</h3>
+        <p>Casquinha rachada por fora, molhadinho por dentro.</p>
+        <div class="chips"><i class="pchip al">glúten</i><i class="pchip al">leite</i><i class="pchip al">ovos</i></div>
+        <div class="row"><strong>R$ 13,50</strong><button class="add" type="button" aria-label="Adicionar Brownie Belga">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="muffin-de-banana" data-cat="comer" data-cat-name="Para comer" data-price="11.50" data-opt="food-warm" data-allerg="gluten,leite,ovos" data-diet="">
+        <span class="tag-sel">Novo</span>
+        <div class="card-img" style="--bg:#f2ddc6"><img class="sp3d" src="assets/3d/muffin.webp" alt="Muffin de Banana" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Muffin de Banana</h3>
+        <p>Com gotas de chocolate escondidas no meio.</p>
+        <div class="chips"><i class="pchip al">glúten</i><i class="pchip al">leite</i><i class="pchip al">ovos</i></div>
+        <div class="row"><strong>R$ 11,50</strong><button class="add" type="button" aria-label="Adicionar Muffin de Banana">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="barra-de-chocolate-70" data-cat="comer" data-cat-name="Para comer" data-price="11.00" data-opt="food" data-allerg="leite,soja" data-diet="">
+        
+        <div class="card-img" style="--bg:#e3cdb3"><img class="sp3d" src="assets/3d/chocolate.webp" alt="Barra de Chocolate 70%" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Barra de Chocolate 70%</h3>
+        <p>Amargo na medida, feito para o espresso.</p>
+        <div class="chips"><i class="pchip al">leite</i><i class="pchip al">soja</i></div>
+        <div class="row"><strong>R$ 11,00</strong><button class="add" type="button" aria-label="Adicionar Barra de Chocolate 70%">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="rosca-de-canela" data-cat="comer" data-cat-name="Para comer" data-price="10.50" data-opt="food-warm" data-allerg="gluten,leite,ovos" data-diet="">
+        
+        <div class="card-img" style="--bg:#e9d2ae"><img class="sp3d" src="assets/3d/cinnamon.webp" alt="Rosca de Canela" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Rosca de Canela</h3>
+        <p>Canela em pau moída na hora.</p>
+        <div class="chips"><i class="pchip al">glúten</i><i class="pchip al">leite</i><i class="pchip al">ovos</i></div>
+        <div class="row"><strong>R$ 10,50</strong><button class="add" type="button" aria-label="Adicionar Rosca de Canela">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="graos-especiais-250g" data-cat="levar" data-cat-name="Grãos" data-price="39.90" data-opt="bag" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#e8cfae"><img class="sp3d" src="assets/3d/bean_bowl.webp" alt="Grãos Especiais 250g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Grãos Especiais 250g</h3>
+        <p>Torra média, perfeito para coar em casa.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 39,90</strong><button class="add" type="button" aria-label="Adicionar Grãos Especiais 250g">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="blend-da-casa-500g" data-cat="levar" data-cat-name="Grãos" data-price="69.90" data-opt="bag" data-allerg="" data-diet="vegano">
+        <span class="tag-sel">Assinatura</span>
+        <div class="card-img" style="--bg:#f0d6b6"><img class="sp3d" src="assets/3d/coffee_bag.webp" alt="Blend da Casa 500g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Blend da Casa 500g</h3>
+        <p>O queridinho da nossa torrefação.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 69,90</strong><button class="add" type="button" aria-label="Adicionar Blend da Casa 500g">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="cafe-moido-250g" data-cat="levar" data-cat-name="Grãos" data-price="42.90" data-opt="bag-ground" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#e5d3bb"><img class="sp3d" src="assets/3d/ground_coffee.webp" alt="Café Moído 250g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Café Moído 250g</h3>
+        <p>Escolha a moagem, a gente mói na hora.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 42,90</strong><button class="add" type="button" aria-label="Adicionar Café Moído 250g">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="kit-3-origens-300g" data-cat="levar" data-cat-name="Grãos" data-price="89.00" data-opt="bag" data-allerg="" data-diet="vegano">
+        <span class="tag-sel">Presente</span>
+        <div class="card-img" style="--bg:#ecd9bd"><img class="sp3d" src="assets/3d/beans_scatter_a.webp" alt="Kit 3 Origens 300g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Kit 3 Origens 300g</h3>
+        <p>Três fazendas, três perfis. Para quem gosta de comparar.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 89,00</strong><button class="add" type="button" aria-label="Adicionar Kit 3 Origens 300g">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="torra-escura-250g" data-cat="levar" data-cat-name="Grãos" data-price="44.90" data-opt="bag" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#e2cdaa"><img class="sp3d" src="assets/3d/beans_scatter_c.webp" alt="Torra Escura 250g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Torra Escura 250g</h3>
+        <p>Mais corpo, mais chocolate, zero timidez.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 44,90</strong><button class="add" type="button" aria-label="Adicionar Torra Escura 250g">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="descafeinado-250g" data-cat="levar" data-cat-name="Grãos" data-price="46.90" data-opt="bag" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#eadcc4"><img class="sp3d" src="assets/3d/beans_scatter_b.webp" alt="Descafeinado 250g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Descafeinado 250g</h3>
+        <p>Todo o sabor, nenhuma desculpa para não dormir.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 46,90</strong><button class="add" type="button" aria-label="Adicionar Descafeinado 250g">Escolher</button></div>
+      </article>
+      <article class="card reveal" data-id="cafe-para-espresso-250g" data-cat="levar" data-cat-name="Grãos" data-price="45.90" data-opt="none" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#e6d0b2"><img class="sp3d" src="assets/3d/broken_beans.webp" alt="Café para Espresso 250g" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Café para Espresso 250g</h3>
+        <p>Moagem fina, calibrado para máquina.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 45,90</strong><button class="add" type="button" aria-label="Adicionar Café para Espresso 250g">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="moedor-manual" data-cat="casa" data-cat-name="Para casa" data-price="189.00" data-opt="none" data-allerg="" data-diet="">
+        
+        <div class="card-img" style="--bg:#dfd6b8"><img class="sp3d" src="assets/3d/grinder.webp" alt="Moedor Manual" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Moedor Manual</h3>
+        <p>Madeira e latão. Dura mais que você no trabalho.</p>
+        <div class="chips"></div>
+        <div class="row"><strong>R$ 189,00</strong><button class="add" type="button" aria-label="Adicionar Moedor Manual">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="filtros-de-papel-100un" data-cat="casa" data-cat-name="Para casa" data-price="24.90" data-opt="none" data-allerg="" data-diet="">
+        
+        <div class="card-img" style="--bg:#ece2d2"><img class="sp3d" src="assets/3d/paper_filters.webp" alt="Filtros de Papel (100un)" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Filtros de Papel (100un)</h3>
+        <p>Para o coador nunca te deixar na mão.</p>
+        <div class="chips"></div>
+        <div class="row"><strong>R$ 24,90</strong><button class="add" type="button" aria-label="Adicionar Filtros de Papel (100un)">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="caneca-da-casa-350ml" data-cat="casa" data-cat-name="Para casa" data-price="59.90" data-opt="none" data-allerg="" data-diet="">
+        <span class="tag-sel">Novo</span>
+        <div class="card-img" style="--bg:#d6ddd4"><img class="sp3d" src="assets/3d/caneca.webp" alt="Caneca da Casa 350ml" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Caneca da Casa 350ml</h3>
+        <p>Cerâmica esmaltada verde-oliva, feita à mão.</p>
+        <div class="chips"></div>
+        <div class="row"><strong>R$ 59,90</strong><button class="add" type="button" aria-label="Adicionar Caneca da Casa 350ml">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="colher-dosadora" data-cat="casa" data-cat-name="Para casa" data-price="34.90" data-opt="none" data-allerg="" data-diet="">
+        
+        <div class="card-img" style="--bg:#e7dcc8"><img class="sp3d" src="assets/3d/spoon_beans.webp" alt="Colher Dosadora" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Colher Dosadora</h3>
+        <p>Dose certa de 10g. Chega de achismo.</p>
+        <div class="chips"></div>
+        <div class="row"><strong>R$ 34,90</strong><button class="add" type="button" aria-label="Adicionar Colher Dosadora">Adicionar</button></div>
+      </article>
+      <article class="card reveal" data-id="acucar-demerara-50un" data-cat="casa" data-cat-name="Para casa" data-price="18.90" data-opt="none" data-allerg="" data-diet="vegano">
+        
+        <div class="card-img" style="--bg:#f0e4cf"><img class="sp3d" src="assets/3d/sugar.webp" alt="Açúcar Demerara (50un)" width="300" height="240" loading="lazy" decoding="async"></div>
+        <h3>Açúcar Demerara (50un)</h3>
+        <p>Sachês individuais, para adoçar sem culpa.</p>
+        <div class="chips"><i class="pchip ok">vegano</i></div>
+        <div class="row"><strong>R$ 18,90</strong><button class="add" type="button" aria-label="Adicionar Açúcar Demerara (50un)">Adicionar</button></div>
+      </article>
+    </div>
+    <p class="legend">Alérgenos informados por item. Em caso de alergia grave, fale com a gente antes de pedir: a cozinha é compartilhada.</p>
+  </section>
+
+  <!-- LABORATÓRIO DE SABOR -->
+  <section class="section lab" id="lab" data-dark>
+    <div class="lab-wrap">
+      <header class="lab-head">
+        <span class="chip"><i></i>Descubra o seu café</span>
+        <h2>Laboratório de sabor</h2>
+        <p class="sub">Mexa nos controles do jeito que você gosta e a gente mostra quais cafés combinam mais com o seu paladar.</p>
+      </header>
+      <div class="lab-grid">
+        <div class="lab-panel">
+          <div class="lab-sliders" id="labSliders"></div>
+          <div class="lab-presets">
+            <span class="tlm-k">Perfis rápidos</span>
+            <div class="lab-chips" id="labPresets"></div>
+          </div>
+        </div>
+        <div class="lab-radar">
+          <svg viewBox="-100 -18 520 356" id="radarSvg" aria-hidden="true">
+            <g id="radarGrid"></g>
+            <polygon id="radarMatch" class="r-match"/>
+            <polygon id="radarYou" class="r-you"/>
+            <g id="radarLabels"></g>
+          </svg>
+          <div class="lab-best" id="labBest"></div>
+        </div>
+      </div>
+      <div class="lab-results" id="labResults"></div>
+    </div>
+  </section>
+
+  <!-- CLUBE & PRESENTES -->
+  <section class="section clube" id="clube">
+    <h2 class="reveal">Clube &amp; presentes</h2>
+    <p class="sub reveal">Junte selos, assine os seus grãos ou monte um kit para alguém que merece.</p>
+    <div class="clube-grid">
+      <article class="panel reveal" id="loyalty">
+        <header><span class="kick">Cartão fidelidade</span><h3>A cada <b data-stamps-need>10</b> bebidas, a próxima é por nossa conta</h3></header>
+        <div class="stamps" id="stamps" aria-live="polite"></div>
+        <p class="panel-note" id="stampsTxt"></p>
+        <small class="fine">Os selos ficam salvos neste aparelho e entram a cada pedido finalizado com bebidas.</small>
+      </article>
+      <article class="panel reveal" id="sub">
+        <header><span class="kick">Assinatura de grãos</span><h3>Grãos frescos chegando sozinhos, com 15% off</h3></header>
+        <div class="seg" data-seg="plano"><button type="button" data-v="250" class="on">250 g</button><button type="button" data-v="500">500 g</button><button type="button" data-v="1000">1 kg</button></div>
+        <div class="seg" data-seg="freq"><button type="button" data-v="mensal" class="on">Mensal</button><button type="button" data-v="quinzenal">Quinzenal</button></div>
+        <label class="sel">Moagem<select id="subGrind"><option>Em grãos</option><option>Coador / filtro</option><option>Espresso</option><option>Prensa francesa</option><option>Moka</option></select></label>
+        <div class="price-line"><span>por entrega</span><s id="subOld"></s><strong id="subPrice"></strong></div>
+        <p class="panel-note" id="subNote"></p>
+        <button type="button" class="btn" id="subAdd">Assinar agora</button>
+      </article>
+      <article class="panel reveal" id="kit">
+        <header><span class="kick">Monte seu kit presente</span><h3>Um café, um doce e um mimo, com 10% off</h3></header>
+        <label class="sel">Café<select id="kitCafe"></select></label>
+        <label class="sel">Doce<select id="kitDoce"></select></label>
+        <label class="sel">Mimo<select id="kitMimo"></select></label>
+        <label class="check"><input type="checkbox" id="kitWrap" checked> Embalagem de presente com cartão (+ R$ 8,00)</label>
+        <div class="price-line"><span>kit completo</span><s id="kitOld"></s><strong id="kitPrice"></strong></div>
+        <button type="button" class="btn" id="kitAdd">Adicionar kit</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section about" id="sobre" data-dark>
+    <img class="deco" src="assets/3d/cinnamon.webp" alt="" aria-hidden="true" loading="lazy" style="right:-4vw;top:2vw;width:20vw;--rot:8deg;filter:blur(1.5px)">
+    <img class="deco" src="assets/3d/moka.webp" alt="" aria-hidden="true" loading="lazy" style="right:6vw;bottom:-1vw;width:11vw;--rot:3deg">
+    <div class="about-box reveal">
+      <h2>Do grão à xícara</h2>
+      <p>Trabalhamos com pequenos produtores e torramos em lotes pequenos para garantir frescor. Cada pacote sai da torra direto para a sua casa.</p>
+      <div class="stats">
+        <div><strong data-count="12">0</strong><span>Origens de café</span></div>
+        <div><strong data-count="3">0</strong><span>Torras por semana</span></div>
+        <div><strong data-count="40">0</strong><span>Minutos até a sua porta</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES + DÚVIDAS -->
+  <section class="section ajuda" id="ajuda">
+    <div class="ajuda-grid">
+      <div class="reviews reveal" id="reviews"></div>
+      <div class="faq reveal">
+        <h2>Dúvidas frequentes</h2>
+        <div id="faqList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section contato" id="contato">
+    <h2 class="reveal">Visite ou fale com a gente</h2>
+    <div class="contato-grid">
+      <div class="info reveal">
+        <div class="open-badge big" data-open><i></i><span>…</span></div>
+        <dl>
+          <div><dt>Endereço</dt><dd><a data-cfg-href="maps" target="_blank" rel="noopener"><span data-cfg="endereco"></span></a><br><small>CEP <span data-cfg="cep"></span></small></dd></div>
+          <div><dt>Telefone</dt><dd><a data-cfg-href="tel" data-cfg="telefone"></a></dd></div>
+          <div><dt>E-mail</dt><dd><a data-cfg-href="mail" data-cfg="email"></a></dd></div>
+          <div><dt>Instagram</dt><dd><a data-cfg-href="insta" target="_blank" rel="noopener" data-cfg="instagram"></a></dd></div>
+        </dl>
+        <table class="hours" id="hours" aria-label="Horário de funcionamento"></table>
+      </div>
+      <div class="map reveal" id="map"><button type="button" class="map-load" id="mapLoad">Carregar mapa</button></div>
+      <form class="form reveal" id="contactForm">
+        <h3>Mande uma mensagem</h3>
+        <input type="text" name="c_nome" placeholder="Seu nome" autocomplete="name" required aria-label="Seu nome">
+        <input type="email" name="c_email" placeholder="Seu e-mail" autocomplete="email" required aria-label="Seu e-mail">
+        <textarea name="c_msg" placeholder="Sua mensagem" rows="4" required aria-label="Sua mensagem"></textarea>
+        <button class="btn" type="submit">Enviar</button>
+        <small class="fine" id="formNote">Abre o seu WhatsApp ou e-mail com a mensagem pronta.</small>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="foot" data-dark>
+    <div class="foot-in">
+      <div><strong data-cfg="nome">Grão Dourado</strong><p data-cfg="endereco"></p><p>CNPJ <span data-cfg="cnpj"></span></p></div>
+      <nav aria-label="Rodapé"><a href="#produtos">Cardápio</a><a href="#clube">Clube</a><a href="#ajuda">Dúvidas</a><a href="#contato">Contato</a></nav>
+      <div class="foot-tools">
+        <button type="button" class="tool" data-theme-toggle><span data-theme-ico>☾</span> Tema</button>
+        <button type="button" class="tool" data-calm-toggle><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-calm-label>Efeitos completos</span></button>
+        <button type="button" class="tool" data-lite-toggle><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h12v11h-12zM15.5 10.5l5-3v9l-5-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-lite-label>Vídeos ligados</span></button>
+      </div>
+    </div>
+    <p class="copy-foot">© 2026 Grão Dourado. Feito com café, carinho e zero horas de sono.</p>
+    <p class="credits">Trilha original da casa, composta por código. Piano: Salamander Grand Piano, de Alexander Holm (CC BY 3.0). Contrabaixo: FluidR3_GM (licença MIT). Bateria sintetizada.</p>
+  </footer>
+
+
+  <!-- CARRINHO / CHECKOUT -->
+  <div class="cart-veil" id="cartVeil"></div>
+  <aside class="cart" id="cart" aria-hidden="true" aria-label="Carrinho e pedido" role="dialog">
+    <header class="cart-head">
+      <div><h2 id="cartTitle">Seu carrinho</h2><ol class="steps" id="steps"><li class="on">Itens</li><li>Entrega</li><li>Pagamento</li></ol></div>
+      <button type="button" id="cartClose" aria-label="Fechar carrinho">✕</button>
+    </header>
+    <div class="cart-scroll">
+      <!-- 1 · itens -->
+      <div class="view" id="vCart">
+        <div class="ship" id="ship"><p id="shipTxt"></p><div class="ship-bar"><i id="shipFill"></i></div></div>
+        <ul class="cart-list" id="cartList"></ul>
+        <div class="cart-empty" id="cartEmpty"><div>☕</div><p>Carrinho vazio.<br>Igual à xícara às 7h da manhã.</p><a href="#produtos" class="btn" id="goShop">Ver o cardápio</a></div>
+        <label class="reward" id="reward" hidden><input type="checkbox" id="useReward"> <span>Usar meu café grátis do cartão fidelidade</span></label>
+        <div class="coupon" id="couponBox"><input id="couponIn" type="text" placeholder="Cupom de desconto" autocomplete="off" aria-label="Cupom de desconto"><button type="button" id="couponBtn">Aplicar</button></div>
+      </div>
+      <!-- 2 · entrega -->
+      <form class="view order" id="vDados" hidden novalidate>
+        <div class="seg wide" id="modeSeg"><button type="button" data-v="entrega" class="on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17.5a2.5 2.5 0 1 0 0-.01M19 17.5a2.5 2.5 0 1 0 0-.01M7.5 17.5h7l2-6h-4M14 7h3l2 4.5M3 13h6l1.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Entrega</button><button type="button" data-v="retirada"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v9h16v-9M3 6l1.5-3h15L21 6v1.5a2.5 2.5 0 0 1-4.5 1.5 2.5 2.5 0 0 1-4.5 0 2.5 2.5 0 0 1-4.5 0A2.5 2.5 0 0 1 3 7.5V6ZM10 19v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Retirar na loja</button></div>
+        <label>Seu nome<input name="nome" required autocomplete="name"></label>
+        <label>WhatsApp<input name="fone" required inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000"></label>
+        <div id="addrBox">
+          <div class="cep-row"><label>CEP<input name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9"></label><span class="cep-st" id="cepSt"></span></div>
+          <label>Rua<input name="rua" autocomplete="address-line1"></label>
+          <div class="two"><label>Número<input name="num" inputmode="numeric"></label><label>Complemento<input name="comp" placeholder="apto, bloco…"></label></div>
+          <div class="two"><label>Bairro<input name="bairro"></label><label>Cidade<input name="cidade"></label></div>
+          <p class="ship-quote" id="shipQuote"></p>
+        </div>
+        <div id="pickBox" hidden><p class="pick">Retire no balcão: <b data-cfg="endereco"></b>. Avisamos pelo WhatsApp quando estiver pronto.</p></div>
+        <label>Observações<textarea name="obs" rows="2" placeholder="Ex.: interfone quebrado, sem canudo…"></textarea></label>
+      </form>
+      <!-- 3 · pagamento -->
+      <div class="view" id="vPag" hidden>
+        <div class="pay" id="payList">
+          <label class="pay-opt"><input type="radio" name="pay" value="pix" checked><span><b>Pix</b><small>QR Code na hora, confirmação instantânea</small></span><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></i></label>
+          <label class="pay-opt"><input type="radio" name="pay" value="cartao"><span><b>Cartão na entrega</b><small>Crédito ou débito na maquininha</small></span><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17zM3.5 10h17M7 14.5h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></i></label>
+          <label class="pay-opt"><input type="radio" name="pay" value="dinheiro"><span><b>Dinheiro</b><small>Diga se precisa de troco</small></span><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3zM12 12m-2.2 0a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0-4.4 0M6 9.5v5M18 9.5v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></i></label>
+        </div>
+        <label class="troco" id="trocoBox" hidden>Troco para quanto?<input id="troco" inputmode="decimal" placeholder="Ex.: 50"></label>
+        <div class="resume" id="resume"></div>
+      </div>
+      <!-- 4 · concluído -->
+      <div class="view done" id="vDone" hidden>
+        <div class="big"><svg class="done-ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".25"/><path class="done-ring" d="M32 3a29 29 0 1 1 0 58a29 29 0 1 1 0-58" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path class="done-tick" d="M20 33l8 8 16-17" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 id="doneTitle">Pedido montado!</h3>
+        <p id="doneTxt"></p>
+        <div class="pix-box" id="pixBox" hidden>
+          <div class="qr" id="qr"></div>
+          <div class="pix-amt"><small>Valor</small><strong id="pixAmt"></strong></div>
+          <button type="button" class="ghost-btn" id="pixCopy">Copiar código Pix (copia e cola)</button>
+          <p class="fine" id="pixNote"></p>
+        </div>
+        <pre id="doneMsg"></pre>
+        <div class="done-actions">
+          <a class="btn" id="doneWa" target="_blank" rel="noopener" hidden>Enviar no WhatsApp</a>
+          <button type="button" class="ghost-btn" id="doneCopy">Copiar pedido</button>
+          <button type="button" class="cart-clear" id="doneClose">Fechar</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart-foot" id="cartFoot">
+      <dl class="sum">
+        <div><dt>Subtotal</dt><dd id="sSub">R$ 0,00</dd></div>
+        <div id="rowDisc" hidden><dt>Desconto <small id="discName"></small></dt><dd id="sDisc"></dd></div>
+        <div id="rowReward" hidden><dt>Fidelidade</dt><dd id="sReward"></dd></div>
+        <div><dt>Entrega</dt><dd id="sShip">calculada no próximo passo</dd></div>
+        <div class="tot"><dt>Total</dt><dd id="sTot">R$ 0,00</dd></div>
+      </dl>
+      <button type="button" class="btn cart-go" id="cartGo">Continuar</button>
+      <button type="button" class="cart-clear" id="cartBack">Esvaziar carrinho</button>
+    </div>
+  </aside>
+
+  <!-- JANELA DE OPÇÕES DO ITEM -->
+  <div class="opt-veil" id="optVeil"></div>
+  <div class="opt" id="opt" role="dialog" aria-modal="true" aria-labelledby="optName" aria-hidden="true">
+    <button type="button" class="opt-x" id="optClose" aria-label="Fechar">✕</button>
+    <div class="opt-top"><div class="opt-img" id="optImg"></div><div><h3 id="optName"></h3><p id="optDesc"></p><div class="chips" id="optChips"></div></div></div>
+    <div class="drink" id="drink" hidden>
+      <div class="dk-cup" aria-hidden="true"><div class="dk-steam"><i></i><i></i><i></i></div><div class="dk-glass"><div class="dk-in"><div class="dk-layers"></div><div class="dk-ice"><i></i><i></i><i></i></div></div></div></div>
+      <div class="dk-info"><span class="dk-k">Sua bebida, montada agora</span><ul class="dk-leg"></ul></div>
+    </div>
+    <div class="opt-groups" id="optGroups"></div>
+    <div class="opt-foot">
+      <div class="qty big" id="optQty"><button type="button" data-q="-1" aria-label="Diminuir">−</button><span id="optQ">1</span><button type="button" data-q="1" aria-label="Aumentar">+</button></div>
+      <button type="button" class="btn" id="optAdd">Adicionar</button>
+    </div>
+  </div>
+
+  <!-- versão para imprimir / PDF -->
+  <div id="printArea" aria-hidden="true"></div>
+
+
+  <div class="toast" id="toast"></div>
+  <script src="config.js"></script>
+  <script src="core.js"></script>
+  <script src="shop.js"></script>
+  <script src="script.js"></script>
+  <script src="dust.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script src="magia.js"></script>
+</body>
+</html>

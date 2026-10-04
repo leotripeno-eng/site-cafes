@@ -1,0 +1,66 @@
+GRÃO DOURADO · COMO USAR O SITE
+================================
+
+1) ABRIR
+   Dê dois cliques em index.html. Funciona direto do computador.
+   (Instalar como app no celular e funcionar sem internet só acontece
+   depois que o site estiver publicado em um endereço https.)
+
+2) COLOCAR OS SEUS DADOS  →  abra o arquivo config.js
+   Tudo que está marcado com "⚠ TROCAR" é exemplo. Lá você coloca:
+   • endereço, telefone, e-mail, CNPJ, Instagram e posição no mapa
+   • número do WhatsApp que recebe os pedidos (ex.: '5511999999999')
+   • sua chave Pix  →  o QR Code passa a cobrar de verdade
+   • horário de funcionamento (o selo "Aberto/Fechado" usa isso)
+   • cidade e bairros de entrega, taxas e valor da entrega grátis
+   • cupons, avaliações reais de clientes e perguntas frequentes
+
+3) PREÇOS, NOMES E PRODUTOS
+   Estão nos cartões do cardápio em index.html (procure por data-price).
+   Alérgenos: atributo data-allerg. Confira se batem com as suas receitas.
+
+   VITRINE (os 5 favoritos com luz colorida e vapor, logo depois dos vídeos)
+   Em index.html, procure por "vitrineData". Cada favorito tem:
+   • id      → o mesmo data-id do cartão no cardápio (nome e preço vêm de lá)
+   • img     → a imagem do produto
+   • luz     → a cor da luz de palco (ex.: "#6e1f22")
+   • efeito  → "vapor", "gelo" ou "aroma"
+   • origem  → de onde sai o efeito, em fração da imagem [horizontal, vertical]
+   • texto e notas (Intensidade, Doçura, Corpo de 1 a 5)
+
+4) PUBLICAR NA INTERNET (grátis)
+   • Netlify Drop: entre em app.netlify.com/drop e arraste a pasta inteira.
+   • Depois de publicar, troque "assets/og.jpg" no topo do index.html pelo
+     endereço completo (ex.: https://seusite.com.br/assets/og.jpg) para a
+     imagem aparecer quando o link for compartilhado no WhatsApp.
+
+5) VÍDEOS
+   assets/video/cN.webm    → computador (1920x1080, tratados com a mesma cor)
+   assets/video/cN-m.webm  → celular (540x960, recortado no assunto da cena)
+   assets/video/cN.jpg     → capa (aparece enquanto carrega e no modo leve)
+   assets/video/cN.m4a     → som ambiente de cada cena
+   Para trocar um vídeo: WebM VP9 sem áudio, com quadro-chave a cada 6
+   quadros (é o que deixa a rolagem lisa). Exemplo com o ffmpeg:
+   ffmpeg -i novo.mp4 -an -vf scale=1920:1080 -c:v libvpx-vp9 -g 6 -crf 36 -b:v 0 c2.webm
+
+6) MÚSICA
+   assets/audio/jazz.m4a → trilha original da casa (2min36, repete sem
+   emenda). Só é baixada quando o cliente liga o som ("Jazz" no topo).
+   Créditos (já estão no rodapé do site): piano Salamander Grand Piano,
+   de Alexander Holm (CC BY 3.0); contrabaixo FluidR3_GM (MIT).
+   Para usar outra música, troque o arquivo mantendo o nome.
+   Outros créditos: fontes Bricolage Grotesque, Instrument Sans e JetBrains
+   Mono (SIL Open Font License); rolagem suave Lenis (licença MIT).
+
+Observação: selos de fidelidade e carrinho ficam salvos no aparelho de cada
+cliente (não existe servidor). Para um programa de fidelidade "à prova de
+fraude", é preciso um sistema com login ou o cartão físico no balcão.
+
+7) PARA EDITAR O CÓDIGO
+   Os arquivos da raiz (script.js, shop.js, style.css...) são a versão leve
+   (minificada). Os originais legíveis estão em fonte/. Edite lá e rode
+   "sh fonte/build.sh" (precisa do Node) para gerar a versão leve de novo.
+   magia.css / magia.js = terceira passada: botões, vitrine, cardápio em
+   cores, vapor, rolagem suave (Lenis, em vendor/) e o tocador de jazz.
+   fonts.css = fontes embutidas (funcionam até abrindo o arquivo direto).
+   O config.js continua legível na raiz: é ele que você edita para a loja.
